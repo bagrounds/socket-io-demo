@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <main>
+      <h1>Data: <span id='view'></span></h1>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      ;(function () {
+        'use strict'
+
+        var SERVER_ADDRESS = 'http://localhost:8080'
+        var VIEW_ID = 'view'
+        var MESSAGE_EVENT = 'message'
+
+        var socket = io(SERVER_ADDRESS)
+        var view = document.getElementById(VIEW_ID)
+
+        socket.on(MESSAGE_EVENT, render)
+
+        function render (message) {
+          view.innerHTML = message.data
+        }
+      })()
+    </script>
+  </body>
+</html>
+
