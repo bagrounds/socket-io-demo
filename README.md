@@ -1,6 +1,6 @@
 # socket-io-demo
 
-## Running the demo
+## Get the project
 
 ```sh
 # get the project
@@ -8,11 +8,17 @@ git clone git@gitlab.com:bagrounds/socket-io-demo
 
 # change directories
 cd socket-io-demo
+```
 
-# install npm dependencies
+## Install npm dependencies
+
+```sh
 npm install
+```
 
-# start the server
+## Start the server
+
+```sh
 npm start
 
 # direct your browser to localhost:8080
@@ -21,16 +27,6 @@ npm start
 or
 
 ```sh
-# get the project
-git clone git@gitlab.com:bagrounds/socket-io-demo
-
-# change directories
-cd socket-io-demo
-
-# install npm dependencies
-npm install
-
-# start the server
 PORT=1234 npm start
 
 # direct your browser to localhost:1234
